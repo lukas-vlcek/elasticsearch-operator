@@ -5,6 +5,10 @@ RUN make
 
 FROM registry.svc.ci.openshift.org/openshift/origin-v4.0:base
 
+RUN yum -y install epel-release && \
+    yum -y install python-pip && \
+    pip install elasticsearch
+
 ENV ALERTS_FILE_PATH="/etc/elasticsearch-operator/files/prometheus_alerts.yml"
 ENV RULES_FILE_PATH="/etc/elasticsearch-operator/files/prometheus_rules.yml"
 

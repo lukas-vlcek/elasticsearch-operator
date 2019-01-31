@@ -122,4 +122,4 @@ class Yacht():
 
 if __name__ == '__main__':
     yacht = Yacht(os.getenv('YACHT_LOG_LEVEL', 'INFO'))
-    yacht.loop()
+    # yacht.loop()
